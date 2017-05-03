@@ -1,0 +1,128 @@
+<html>
+<head>
+<link href="https://fonts.googleapis.com/css?family=Dancing+Script|Jim+Nightshade|Griffy|Kaushan+Script" rel="stylesheet">
+<link type="text/css" rel="stylesheet" href="everyday.css">
+<script src="handlebars-v4.0.5.js"></script>
+<title> Everyday Decisions</title>
+</head>
+	<body>
+	<marquee><h1> Decisions We Make Everyday!!</h1></marquee>
+	<label> Is it Sunny Today???</label>	
+    <input id="sunnyd" type="radio" name="weather" value="Sunny Day">
+	<label> Is it Cloudy Today???</label>
+    <input id="cloudyd" type="radio" name="weather" value="Cloudy Day">
+	<label> Is it Rainy Today???</label>
+	<input id="rainyd" type="radio" name="weather" value="Rainy Day">
+	<script class="sunnyDTemplate" type="text/x-handlebars-template">
+		
+		<option value="" disabled selected>Select Your Option  </option>
+		
+
+          {{#each name}}
+		<option> {{this}} </option>
+			{{/each}}
+		
+	
+		</script>	
+        <br>
+		
+	<script class="sunTable" type="text/x-handlebars-template">
+	<table width="100%">
+	<tr>
+	<th>Time</th>
+	<th>Menu</th>
+	<th> More Information</th>
+	</tr>
+{{#each sunmenu}}
+    <tr>
+	<td>{{name}}</td>
+	<td>{{meal}}</td>
+	<td><a href="{{link}}">{{description}}</a></td>
+	</tr>
+	{{/each}}
+	</table>
+		
+		
+		</script>
+		
+<script class="cloudTable" type="text/x-handlebars-template">
+	<table width="100%">
+	<tr>
+	<th>Time</th>
+	<th>Menu</th>
+	<th>More Information</th>
+	</tr>
+{{#each cloudmenu}}
+    <tr>
+	<td>{{name}}</td>
+	<td>{{meal}}</td>
+	<td>{{link}}</td>
+	<td><a href="{{link}}">{{description}}</a></td>
+	</tr>
+	{{/each}}
+	</table>
+		
+		
+		</script>
+		
+<script class="rainTable" type="text/x-handlebars-template">
+	<table width="100%">
+	<tr>
+	<th>Time</th>
+	<th>Menu</th>
+	<th>More Information</th>
+		
+	</tr>
+{{#each Rainmenu}}
+    <tr>
+	<td>{{name}}</td>
+	<td>{{meal}}</td>
+	<td><a href="{{link}}">{{description}}</a></td>
+	</tr>
+	{{/each}}
+	</table>
+		
+		
+		</script>
+
+		
+<div class="selectedOpt"></div>
+		
+	<div id="sunny">
+		<h2>Sunny day</h2>
+		<img src="sunny.jpg" id="sunImage" width="60%" height="30%">
+			<div id="sunnyDay">
+			<select class="sunnyMenu"></select>
+				<input type="button" id="btnRainy" value="search" onclick="searchOne()">
+				<div id="sunnyDisplay"></div>
+			</div>
+		</div>
+	
+	<div id="cloudy" align="center" style="display:none">
+		<h2>Cloudy</h2>
+		<img src="images.jpg" id="sunImage">
+			<div id="cloudyDay">
+			<select class="CloudyMenu"></select>
+				<input type="button" id="btnCloudy" value="search" onclick="searchCloudy()">
+			<div id="cloudDisplay"></div>
+			</div>
+		</div>
+		
+		
+	<div id="rainy" align="center" style="display:none">
+		<h2>Rainy Day</h2>
+		<img src="rainy.jpeg" id="sunImage" width="60%" height="30%" align="center">
+			<div id="rainyDay">
+			<select class="rainyMenu"></select>
+				<input type="button" id="btnRainy" value="search" onclick="searchRainy();">
+		<div id="rainyDisplay"></div>
+			</div>
+		</div>
+
+		
+
+<script type="text/javascript" src="everyday.js"></script>
+		
+	</body>
+
+</html>
