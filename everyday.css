@@ -1,0 +1,24 @@
+#sunny{
+	background-color: coral;
+	
+	display: none;
+}
+#cloudy{
+	background-color: yellow;
+
+	display: none;
+}
+#rainy{
+	background-color: pink;
+
+	display: none;
+}
+h1{
+	font-size: 75px;
+	font-family: "Kaushan Script", cursive;
+}
+
+table,th,td,tr{
+	border: 2px solid black;
+	border-collapse: collapse;
+}
