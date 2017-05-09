@@ -1,24 +1,66 @@
 #sunny{
-	background-color: coral;
-	
+	background-image: url(sun.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin-left:50px;
+	margin-right: 75px;
 	display: none;
+	height: 60%;
 }
 #cloudy{
-	background-color: yellow;
-
+	background-image: url(cloudy-day-5.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+    margin-left:50px;
+	margin-right: 75px;
 	display: none;
+	height: 60%;
 }
 #rainy{
-	background-color: pink;
-
+	background-image: url(download.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin-left:50px;
+	margin-right: 75px;
 	display: none;
+	height: 60%;
+}
+body{
+	text-align: center;
+	background-image: url(weather-703x422.jpg);
+	background-repeat: no-repeat;
+	background-size: cover
 }
 h1{
 	font-size: 75px;
 	font-family: "Kaushan Script", cursive;
 }
+h2{
+	font-family: 'Rye',cursive;
+}
+label{
+	font-family: "Satisfy", cursive;
+	font-size: 30px;
+}
 
 table,th,td,tr{
-	border: 2px solid black;
+	border: 1px solid black;
 	border-collapse: collapse;
+	background-color: lightgrey;
+	font-family: "Gloria Hallelujah", cursive;
+}
+
+.sunnyMenu, .CloudyMenu, .rainyMenu{
+	height: 10%;
+	width: 20%;
+	font-size: 16px;
+	font-family: "Gloria HAllelujah", cursive;
+}
+#btnSunny,#btnCloudy,#btnRainy{
+	height: 10%;
+	width: 10%;
+	position: relative;
+	bottom:2px;
+	font-family: "Gloria HAllelujah", cursive;
+		
 }

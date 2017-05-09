@@ -1,17 +1,18 @@
 <html>
 <head>
-<link href="https://fonts.googleapis.com/css?family=Dancing+Script|Jim+Nightshade|Griffy|Kaushan+Script" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Satisfy|Rye|Ravi+Prakash|Indie+Flower|Gloria+Hallelujah" rel="stylesheet">
 <link type="text/css" rel="stylesheet" href="everyday.css">
 <script src="handlebars-v4.0.5.js"></script>
 <title> Everyday Decisions</title>
 </head>
+	
 	<body>
-	<marquee><h1> Decisions We Make Everyday!!</h1></marquee>
-	<label> Is it Sunny Today???</label>	
+	<h1> How is the weather Outside??</h1>
+	<label> Sunny Day???</label>	
     <input id="sunnyd" type="radio" name="weather" value="Sunny Day">
-	<label> Is it Cloudy Today???</label>
+	<label> Cloudy Day???</label>
     <input id="cloudyd" type="radio" name="weather" value="Cloudy Day">
-	<label> Is it Rainy Today???</label>
+	<label> Rainy Day???</label>
 	<input id="rainyd" type="radio" name="weather" value="Rainy Day">
 	<script class="sunnyDTemplate" type="text/x-handlebars-template">
 		
@@ -27,7 +28,8 @@
         <br>
 		
 	<script class="sunTable" type="text/x-handlebars-template">
-	<table width="100%">
+<br>
+	<table width="70%">
 	<tr>
 	<th>Time</th>
 	<th>Menu</th>
@@ -46,7 +48,8 @@
 		</script>
 		
 <script class="cloudTable" type="text/x-handlebars-template">
-	<table width="100%">
+<br>
+	<table width="70%">
 	<tr>
 	<th>Time</th>
 	<th>Menu</th>
@@ -56,7 +59,6 @@
     <tr>
 	<td>{{name}}</td>
 	<td>{{meal}}</td>
-	<td>{{link}}</td>
 	<td><a href="{{link}}">{{description}}</a></td>
 	</tr>
 	{{/each}}
@@ -66,7 +68,8 @@
 		</script>
 		
 <script class="rainTable" type="text/x-handlebars-template">
-	<table width="100%">
+<br>
+	<table width="70%">
 	<tr>
 	<th>Time</th>
 	<th>Menu</th>
@@ -88,9 +91,10 @@
 		
 <div class="selectedOpt"></div>
 		
-	<div id="sunny">
+	<div id="sunny" align="center">
+		<br>
 		<h2>Sunny day</h2>
-		<img src="sunny.jpg" id="sunImage" width="60%" height="30%">
+		
 			<div id="sunnyDay">
 			<select class="sunnyMenu"></select>
 				<input type="button" id="btnRainy" value="search" onclick="searchOne()">
@@ -99,8 +103,9 @@
 		</div>
 	
 	<div id="cloudy" align="center" style="display:none">
+		<br>
 		<h2>Cloudy</h2>
-		<img src="images.jpg" id="sunImage">
+		
 			<div id="cloudyDay">
 			<select class="CloudyMenu"></select>
 				<input type="button" id="btnCloudy" value="search" onclick="searchCloudy()">
@@ -110,8 +115,9 @@
 		
 		
 	<div id="rainy" align="center" style="display:none">
+		<br>
 		<h2>Rainy Day</h2>
-		<img src="rainy.jpeg" id="sunImage" width="60%" height="30%" align="center">
+		
 			<div id="rainyDay">
 			<select class="rainyMenu"></select>
 				<input type="button" id="btnRainy" value="search" onclick="searchRainy();">

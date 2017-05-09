@@ -9,68 +9,79 @@ var div3 = document.getElementById('rainy');
  optionOne.addEventListener('click', function(){
 	 
     if(optionOne.checked){
+	div3.style.display = 'none';
+	div2.style.display = 'none';
 	 div1.style.display = 'block';
    }
  });
 
 optionTwo.addEventListener('click', function(){
 	if(optionTwo.checked){
+		div1.style.display = 'none';
+		div3.style.display = 'none';
 		div2.style.display = 'block';
 	}
 })
 
 optionThree.addEventListener('click', function(){
 	if(optionThree.checked){
+		div1.style.display = 'none';
+		div2.style.display = 'none';
 		div3.style.display = 'block';
 	}
 })
 var sunmenu=[
-	{name: 'Breakfast', meal: 'Cornflakes', link: "https://www.google.com"},
-	{name: 'Breakfast', meal: 'Toast', link:"www.gmail.com"},
-	{name: 'Breakfast', meal: 'Pan Cakes'},
-	{name: 'Breakfast', meal: 'Waffles'},
+	{name: 'Breakfast', meal: 'Cornflakes', link: "http://www.kelloggs.co.za/en_ZA/kellogg-s-corn-flakes-consumer-brand.html",description:'Kelloggs'},
+	{name: 'Breakfast', meal: 'Toast', link:"https://snapguide.com/supplies/slices-of-toast-bread/",description:'Toasted Bread'},
+	{name: 'Breakfast', meal: 'Pan Cakes', link:'https://snapguide.com/guides/make-red-velvet-pancakes/' ,description:'Red Velvet PAn Cake'},
+	{name: 'Breakfast', meal: 'Waffles', link:'https://snapguide.com/guides/make-waffles-9/', description:'How to make a waffle'},
 
-	{name: 'Lunch', meal: 'Fruits & Yogurt'},
-	{name: 'Lunch', meal: 'Sandwitch'},
-	{name: 'Lunch', meal: ''},
-	{name: 'Lunch', meal: 'Chicken'},
+	{name: 'Lunch', meal: 'Fruits & Yogurt', link:'http://www.momables.com/recipe-fresh-fruit-yogurt/' ,description:'Fruit Smoothie'},
+	{name: 'Lunch', meal: 'Sandwich', link:'http://www.momjunction.com/articles/sandwich-recipes-for-kids_00342426/#gref' ,description:'Sandwiches'},
+	{name: 'Lunch', meal: 'Samosa', link:'http://www.foodnetwork.com/recipes/spiced-potato-stuffed-pastries-samosas-recipe' ,description:'samosas'},
+	{name: 'Lunch', meal: 'Chicken Tikka', link:'http://indianhealthyrecipes.com/chicken-tikka-in-oven/' ,description:'chicken Tikka'},
 	
-	{name: 'Dinner', meal: 'Rice & Beans'},
-	{name: 'Dinner', meal: 'Spagetti & Mince'},
-	{name: 'Dinner', meal: 'Macaroni & Fish'},
-	{name: 'Dinner', meal: 'Samp & Beans'},
+	{name: 'Dinner', meal: 'Rice & Beans', link:'http://www.finecooking.com/recipe/mexican-tomato-rice-beans' ,description:'fine cooking'},
+	{name: 'Dinner', meal: 'Spaghetti & Mince', link:'http://allrecipes.com/recipe/222582/baked-spaghetti/?internalSource=hub%20recipe&referringContentType=search%20results&clickId=cardslot%202' ,description:'baked spaghetti'},
+	{name: 'Dinner', meal: 'Macaroni Salad', link:'http://allrecipes.com/recipe/18089/macaroni-salad/?internalSource=rotd&referringId=556&referringContentType=recipe%20hub&clickId=cardslot%201' ,description:'MAcaroni salad'},
+	{name: 'Dinner', meal: 'Samp & Beans', link:'http://thesouthafricancookbook.blogspot.co.za/2012/10/samp-beans-umngqusho.html' ,description:'umnqusho'},
 ]
 var cloudmenu =[
 
-	{name: 'Breakfast', meal: 'Egg & Mayo'},
-	{name: 'Breakfast', meal: 'Muffins & Orange Juice'},
-	{name: 'Breakfast', meal: 'Weetbix'},
-	{name: 'Breakfast', meal: 'Rice Crispies'},
+	{name: 'Breakfast', meal: 'Egg & Mayo',link:'http://www.greatbritishchefs.com/recipes/perfect-egg-mayo-sandwich-recipe' ,description:'Egg & Mayo Sandwitch'},
+	{name: 'Breakfast', meal: 'Muffins',link:'http://www.taste.com.au/recipes/collections/muffin-recipes' ,description:'Muffins WIthout egg'},
+	{name: 'Breakfast', meal: 'Weetbix',link:'https://weetbix.co.nz/recipe-category/smoothies/' ,description:'weeetbix smoothie'},
+	{name: 'Breakfast', meal: 'Rice Crispies',link:'https://www.ricekrispies.com/en_US/home.html' ,description:'Chrispie snacks'},
 	
 	
-	{name: 'Lunch', meal: 'Bread'},
-	{name: 'Lunch', meal: 'Chicken'},
-	{name: 'Lunch', meal: 'Bread'},
-	{name: 'Lunch', meal: 'Chicken'},
+	{name: 'Lunch', meal: 'Pizza',link:'http://www.simplyrecipes.com/recipes/homemade_pizza/' ,description:'home made Pizza'},
+	{name: 'Lunch', meal: 'Kfc',link:'https://www.tablespoon.com/recipes/copycat-kfc-original-style-chicken/97c93d14-9d8c-4bc7-96dc-1e0b37e4fcaa' ,description:'Fried chicken'},
+	{name: 'Lunch', meal: 'Mc Donalds Burger',link:'http://www.food.com/recipe/the-perfect-burger-92021' ,description:'Burgers'},
+	{name: 'Lunch', meal: 'Pie',link:'http://allrecipes.com/recipes/367/desserts/pies/' ,description:'Pie options'},
 	
 	
-	{name: 'Dinner', meal: 'Rice & Beans'},
+	{name: 'Dinner', meal: 'Bhisto & Pap',link:'http://www.desktopcookbook.com/recipe.asp?ID=25233' ,description:'how to make'},
+	
+	{name: 'Dinner', meal: 'Pap & Steak',link:'http://www.mytasteza.com/s/pap-and-steak.html' ,description:'Lamb Steak'},
+	{name: 'Dinner', meal: "Lasagna",link:'http://www.food24.com/Recipes/Beef-lasagne-20130418?gclid=CP7KzJPq2NMCFZQK0wodAjgOOQ' ,description:'mouth watering recipe'},
 ]
 var Rainmenu=[
-	{name: 'Breakfast', meal: 'Cornflakes'},
-	{name: 'Breakfast', meal: 'Toast'},
-	{name: 'Breakfast', meal: 'Egg & Mayo'},
-	{name: 'Breakfast', meal: 'Muffins & Tea'},
+	
+	{name: 'Breakfast', meal: 'Mealie Porridge', link: "http://www.rainbowcooking.co.nz/recipes/maize-meal-porridge",description:'Sdudu'},
+	{name: 'Breakfast', meal: 'Toast', link:"https://snapguide.com/supplies/slices-of-toast-bread/",description:'Toasted Bread'},
+	{name: 'Breakfast', meal: 'Egg & Mayo',link:'http://www.greatbritishchefs.com/recipes/perfect-egg-mayo-sandwich-recipe' ,description:'Egg & Mayo Sandwitch'},
+	{name: 'Breakfast', meal: 'Muffins',link:'http://www.taste.com.au/recipes/collections/muffin-recipes' ,description:'Muffins WIthout egg'},
+
     
-	{name: 'Lunch', meal: 'Weetbix'},
-	{name: 'Lunch', meal: 'Rice Crispies'},
-	{name: 'Lunch', meal: 'Bread'},
-	{name: 'Lunch', meal: 'Chicken'},
+	{name: 'Lunch', meal: 'Hamburger',link:'http://www.food.com/recipe/the-perfect-burger-92021', description:'Hamburgers'},
+	{name: 'Lunch', meal: 'Chicken Fingers', link:'http://www.foodnetwork.com/recipes/patrick-and-gina-neely/tonys-chicken-tenders-with-honey-mustard-sauce-recipe' ,description:'east to make'},
+	{name: 'Lunch', meal: 'Twister', link:'http://www.food.com/recipe/kfc-twisters-15269' ,description:'Deep Fried'},
+	{name: 'Lunch', meal: 'shwarma', link:'http://www.foodnetwork.com/recipes/jeff-mauro/chicken-shawarma-with-tomato-cucumber-relish-and-tahini-sauce' ,description:'shwarma'},
     
-	{name: 'Dinner', meal: 'Samp & Beans'},
-	{name: 'Dinner', meal: 'Rice & Chicken'},
-    {name: 'Dinner', meal: 'Full Meal'},
-	{name: 'Dinner', meal: 'Rice & Beef Stew'},
+	{name: 'Dinner', meal: 'Potato Pie', link:'http://www.food.com/recipe/easy-sweet-potato-pie-507410' ,description:'easy to make'},
+	{name: 'Dinner', meal: 'Rice & Chicken', link:'http://www.myrecipes.com/ingredients/chicken-recipes/easy-chicken-and-rice-recipes' ,description:'my recipe'},
+    {name: 'Dinner', meal: 'Full Meal', link:'http://www.jamieoliver.com/recipes/category/course/' ,description:'meal Options'},
+	{name: 'Dinner', meal: 'Rice & Beef Stew', link:'https://www.minuterice.com/en-us/recipes/3343/EasyBeefStewwithRice.aspx' ,description:'easy beef stew with Rice'},
 ]
 
 var sunnyD = document.querySelector(".sunnyDTemplate").innerHTML;
@@ -142,7 +153,11 @@ var myTemp = Handlebars.compile(output);
 	  });
 	
 document.getElementById("sunnyDisplay").innerHTML = sunnyTable;
+	if(sunnyday.value === ""){
+  document.getElementById("sunnyDisplay").innerHTML ="Please select an option first!!"		
+	}
 }
+
 
 function searchCloudy(){
 	
@@ -161,6 +176,9 @@ var myTemp = Handlebars.compile(output);
 		cloudmenu:outP
 	  });
 document.getElementById("cloudDisplay").innerHTML = cloudyTable;
+	if(cloudyday.value ===""){
+		document.getElementById('cloudDisplay').innerHTML = "Please select an option first!!"
+	}
 }
 
 
@@ -179,4 +197,7 @@ var myTemp = Handlebars.compile(output);
 		Rainmenu:outputCloudy
 	  });
 document.getElementById("rainyDisplay").innerHTML = rainyTable;
+	if(rainyday.value ===""){
+		document.getElementById("rainyDisplay").innerHTML ="Please select an option first!!"
+	}
 }
